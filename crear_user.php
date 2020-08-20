@@ -29,7 +29,7 @@ if ($API->connect($ip_server, $user_server, $password_server)) {
 
    while ( $contador < $num_fichas) {
    		$codigo = "";
-   		for ($i=0; $i < 7 ; $i++) { // esto es para el usuario
+   		for ($i=0; $i < 6 ; $i++) { // esto es para el usuario
 			$codigo = $codigo.$abc[rand(0,33)];
 			usleep(1800);
 		}
@@ -42,8 +42,7 @@ if ($API->connect($ip_server, $user_server, $password_server)) {
 		      "limit-uptime"     => $tiempo,
 		      "name" => $prefijo.$codigo,
 		      "profile" => $profile,
-		      "password" => $pass,
-		      "server"  => "hotspot1",
+		      "server"  => "hotspot1"
 		   ));
 
 		   $resultados = print_r($ARRAY, true); // $resultados contiene ahora la salida de print_r
@@ -52,7 +51,7 @@ if ($API->connect($ip_server, $user_server, $password_server)) {
 		   if ($cantidad < 10) {
 		   	// esta parte del if solo se ejecuta si la clave se ingreso al mikrotik de manera correcta 
 		   	$contador++;
-		   	echo "Usuario->".$prefijo.$codigo."<br> ";
+		   	echo $prefijo.$codigo."<br> ";
 		   }else{
 		   	// esta parte de se ejecuta si no se pudo agregar la clave al mikrotik 
 		   }	

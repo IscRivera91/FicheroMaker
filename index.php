@@ -86,13 +86,11 @@ session_start();
                         <div class="panel-body">
                             <form method="POST" action="crear_user.php">
                                 Limite de tiempo: <select name="tiempo" class="form-control">
-													  <option value="01:00:00">1 Hora</option>
 													  <option value="02:00:00">2 Hora</option>
-                                                      <option value="03:00:00">3 Hora</option>
-													  <option value="1d 00:00:00">1 Dia</option>
-													  <option value="15d 00:00:00">15 Dias</option>
+                                                      <option value="05:00:00">5 Hora</option>
+													  <option value="1d 00:00:00">24 Horas</option>
+													  <option value="7d 00:00:00">7 Dias</option>
 													  <option value="30d 00:00:00">30 Dias</option>
-                                                      
 												   </select>
                                 <br>
                                 Profile: 
