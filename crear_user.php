@@ -42,7 +42,7 @@ if ($API->connect($ip_server, $user_server, $password_server)) {
 		      "limit-uptime"     => $tiempo,
 		      "name" => $prefijo.$codigo,
 		      "profile" => $profile,
-		      "server"  => "hotspot1"
+		      "server"  => "all"
 		   ));
 
 		   $resultados = print_r($ARRAY, true); // $resultados contiene ahora la salida de print_r
